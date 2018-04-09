@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+html, body, div, header, nav, main, article, section, aside, footer, figure, figcaption {margin:0; padding:0;}
+header, nav, main, article, section, aside, footer, figure, figcaption {display:block;} /* För webbläsare utan stöd för HTML5 */
+html {-webkit-text-size-adjust:100%;} /* Så att Safari i iPhone inte skalar om texten */
+
+body {
+  background-image: url(../image/wooden-wallpaper.jpg);
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}

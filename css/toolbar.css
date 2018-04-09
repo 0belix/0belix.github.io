@@ -1,0 +1,79 @@
+#toolbar {
+	width: 100%;
+	height: 52px;
+	bottom: 0;
+	position: absolute;
+	overflow: visible;
+  background: #F0F0F0;
+  opacity: 0.98;
+  z-index: 2147483647;
+}
+
+#toolbar .btn-group  {
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+#toolbar .btn-group button {
+  margin: 0;
+  padding: 0;
+  padding-left: 6px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  height: 48px;
+}
+
+#toolbar .btn-group img {
+  position: relative;
+	bottom: -2px;
+}
+
+#toolbar .btn-group button span {	/* Tooltip */
+	display: none;
+	color: #fff;
+	background: rgba(51,51,51,0.75);
+	padding: 5px;
+	border-radius: 4px;
+	width: auto;
+  position: absolute;
+  bottom: 100%;
+}
+
+#toolbar .btn-group button span::after { /* Tooltip (arrow) */
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+#toolbar .btn-group button:hover span { /* Tooltip */
+  display: block;
+}
+
+#toolbar .toolbar-clock {
+  float: right;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+}
+
+#toolbar .toolbar-clock span {
+  display: block;
+  padding-right: 5px;
+
+}
+
+#toolbar .toolbar-clock .toolbar-clock-date {
+  padding-top: 2px;
+}
+
+#toolbar .toolbar-clock .toolbar-clock-time {
+  font-size: 1.5em;
+}

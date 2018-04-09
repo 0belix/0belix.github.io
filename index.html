@@ -1,0 +1,157 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="description" content="© 2018 Pierre Johansson">
+
+		<meta property="og:title" content="My awesome og:title" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://0belix.github.io/" />
+		<meta property="og:image" content="https://0belix.github.io/assets/owl.png" />
+		<meta property="og:image:alt" content="An owl" />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="300" />
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/toolbar.css">
+		<link rel="stylesheet" type="text/css" href="css/window.css">
+		<link rel="stylesheet" type="text/css" href="css/chat.css">
+		<link rel="stylesheet" type="text/css" href="css/memory.css">
+		<link rel="stylesheet" type="text/css" href="css/calculator.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Courgette|Germania+One|Open+Sans+Condensed:300|Press+Start+2P|VT323|Yatra+One" rel="stylesheet">
+		<title>PWD</title>
+	</head>
+
+	<body>
+		<!--↓ TEMPLATES ↓-->
+
+		<template id="template-window">
+			<div class="window-frame">
+				<div class="window-title">
+					<img  src="../image/emoticon-poop-black.png" alt="app icon">
+					<span>Window title</span>
+					<div class="btn-group">
+						<button class="sprite sprite-minimize-black disabled"></button>
+						<button class="sprite sprite-maximize-black"></button>
+						<button class="sprite sprite-close-black"></button>
+					</div>
+				</div>
+				<div class="window-menu"></div>
+				<div class="window-content"></div>
+			</div>
+		</template> <!-- <img  src="../image/resize-bottom-right-black.png" alt="resiz e icon" class="resizer disabled"> -->
+
+		<template id="template-chat">
+			<div class="chatContainer">
+				<div class="userDiv hidden">
+						<label for="nickname">Enter username:</label><br>
+						<input type="text" class="nickname" name="nickname" placeholder="Your username.."><br>
+						<button class="save">Save</button>
+				</div>
+				<div class="chatArea"></div>
+				<form>
+					<textarea placeholder="Write something..."></textarea>
+					<button class="submit">Send</button>
+				</form>
+			</div>
+		</template>
+
+		<template id="template-chat-bubble">
+			<div class="chat-bubble"><span class="name"></span><br><span class="msg"></span><span class="time"></span></div>
+		</template>
+
+		<template id="template-memory">
+			<div class="memoryContainer">
+				<div class="victory hidden">
+					Victory!<br>
+					With just <span class="tries"></span> tries,<br>
+					in <span class="time"></span> seconds.
+				</div>
+				<div class="btn-group hidden">
+					<span>Select board:</span><br>
+					<button class="boardSize">2x2</button><br>
+					<button class="boardSize">2x4</button><br>
+					<button class="boardSize">4x2</button><br>
+					<button class="boardSize">4x4</button>
+				</div>
+				<div class="brickContainer"></div>
+			</div>
+		</template>
+
+		<template id="template-memory-brick">
+			<a href="#" class="brick"><img src="image/memory/0.png" alt="A memory brick"></a>
+		</template>
+
+		<template id="template-calculator">
+			<div class="calculatorContainer">
+				<div class="calculator">
+					<div class="display"><input type="text" readonly></div><br>
+					<div class="btn-group">
+						<button class="gray">CE</button>
+						<button class="gray">C</button>
+						<button class="blue">÷</button><br>
+						<button>7</button>
+						<button>8</button>
+						<button>9</button>
+						<button class="blue">​‌×</button><br>
+						<button>4</button>
+						<button>5</button>
+						<button>6</button>
+						<button class="blue">-</button><br>
+						<button>1</button>
+						<button>2</button>
+						<button>3</button>
+						<button class="blue">+</button><br>
+						<button>.</button>
+						<button>0</button>
+						<button class="orange">=</button>
+					</div>
+				</div>
+				<div class="calculator-history hidden"></div>
+			</div>
+		</template>
+
+		<template id="template-calculator-history">
+			<div class="calcHistory"><span class="calc"></span><br><span class="sum"></span></div>
+		</template>
+	
+		<!--↑ TEMPLATES ↑-->
+
+		<div id="container">
+
+			<main id="desktop"></main>
+
+			<footer id="toolbar">
+				<div class="btn-group">
+					<button type="button" class="windowButton restart">
+						<span>Clear desktop</span>
+						<img  src="../image/restart-black.png" alt="restart icon">
+					</button>
+					<button type="button" autofocus class="windowButton chat">
+						<span>Chat</span>
+						<img  src="../image/wechat-black.png" alt="chat icon">
+					</button>
+					<button type="button" class="windowButton memory">
+						<span>Memory</span>
+						<img  src="../image/grid-large-black.png" alt="memory icon">
+					</button>
+					<button type="button" class="windowButton calculator">
+						<span>Calculator</span>
+						<img  src="../image/calculator-black.png" alt="calculator icon">
+					</button>
+				</div>
+
+				<div class="toolbar-clock">
+						<span class="toolbar-clock-date"></span>
+						<span class="toolbar-clock-time"></span>
+				</div>
+			</footer>
+
+		</div>
+		<script src="build.js"></script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+﻿/* TEAM */
+	Pierre Johansson
+	Contact: no [at] email.com
+	Twitter: @noTwitter
+	From: Sweden
+
+/* THANKS */
+	Linn�universitetet
+	From: Kalmar, Sweden
+		
+
+/* SITE */
+	Last update: 2017/11/09
+	Language: Swedish / English
+	Doctype: HTML5
+	IDE: Notepad++, Visual Studio Code

@@ -1,0 +1,164 @@
+.chatContainer .userDiv {
+  border-radius: 25px;
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+  opacity: 0.9;
+  position: absolute;
+  top: 25%;
+  left: calc((100% - 175px) / 2);
+  padding: 4px 1px 4px;
+  z-index: 1;
+}
+
+.chatContainer .userDiv input[type=text] {
+  border: none;
+  text-align: center;
+}
+
+.chatContainer .userDiv button {
+  border-width: 0 1px;
+  border-color: transparent red;
+  border-radius: 5px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  width: 27%;
+  background-color: transparent;
+  color: orange;
+}
+
+.chatContainer .chatArea {
+  width: 100%;
+  height: 410px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: navajowhite;
+}
+
+.chatContainer .chatArea .chat-bubble {
+  position: relative;
+  width: 87%;
+  min-height: 20px;
+  padding: 3px 6px;
+  margin-bottom: 13px;
+  background: black;
+  border-radius: 10px;
+  display: table;
+}
+
+.chatContainer .chatArea .chat-bubble .name {
+  text-decoration: underline;
+  font-family: 'Yatra One', cursive;
+  font-weight: bold;
+}
+
+.chatContainer .chatArea .chat-bubble .msg {
+  font-family: 'Germania One', cursive;
+}
+
+.chatContainer .chatArea .chat-bubble .time {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: right;
+  font-size: 0.8em;
+  opacity: 0.8;
+  float: right;
+}
+
+.chatContainer .chatArea .chat-bubble:nth-child(1) {
+  margin-top: 10px;
+}
+
+.chatContainer .chatArea .chat-bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-top: -10px;
+  top: 75%;
+}
+
+.chatContainer .chatArea .right {
+  float: right;
+  margin-right: 2%;
+  filter: drop-shadow(5px 5px 2px #A3A3A3);
+  background-color: ivory;
+}
+
+.chatContainer .chatArea .left {
+  float: left;
+  margin-left: 2%;
+  filter: drop-shadow(-5px 5px 2px #A3A3A3);
+  background-color: lightcyan;
+}
+
+.chatContainer .chatArea .right:after {
+  border-width: 10px 20px 10px 0;
+  left: -16px;
+  transform: rotate(-20deg);
+  border-color: transparent ivory;
+}
+
+.chatContainer .chatArea .left:after {
+  border-width: 10px 0 10px 20px;
+  right: -16px;
+  transform: rotate(20deg);
+  border-color: transparent lightcyan;
+}
+
+.chatContainer textarea {
+  box-sizing: border-box;
+  resize: none;
+  width: 83.5%;
+  margin-top: 3px;
+  margin-left: 3px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.chatContainer .submit {
+  margin: 0;
+  padding: 0;
+}
+
+.chatContainer .submit {
+  transition: 0.3s all ease;
+  width: 50px;
+  height: 50px;
+  margin-top: 6px;
+  margin-right: 8px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+  zoom: 70%;
+  float: right;
+}
+
+.chatContainer .submit:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: rotate(45deg);
+  transition: 0.3s all ease;
+  border: 2px solid #C15937;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.chatContainer .submit:hover:after {
+  transform: rotate(-90deg);
+}
+
+.chatContainer .submit:focus:after {
+  transform: rotate(-90deg);
+  outline: none;
+}
+
+.chatContainer .submit:active:after {
+  border-color: #F2486B;
+}
